@@ -13,10 +13,13 @@
 
     <!-- Fonts -->
     <link rel="stylesheet" href="fonts/casmira.css">
-    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat:400,700'>
-    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Raleway:300'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:300">
 
     <!-- build:css(.) styles/vendor.css -->
+    <link rel="stylesheet" href="/bower_components/owl-carousel/owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="/bower_components/owl-carousel/owl-carousel/owl.transitions.css">
+    <link rel="stylesheet" href="/bower_components/owl-carousel/owl-carousel/owl.theme.css">
     <!-- bower:css -->
     <!-- endbower -->
     <!-- endbuild -->
@@ -28,7 +31,7 @@
     <!-- endbuild -->
     
   </head>
-  <body>
+  <body id="shop-theme">
     <!--[if lt IE 10]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -94,9 +97,19 @@
       </svg>
     </div> <!-- /#pageloader -->
 
+    <div class="owl-slider owl-theme" id="owl-banner">
+
+      <div class="item -lg"><img src="images/cover-1.jpg" width="100%"></div>
+      <div class="item -lg"><img src="images/cover-2.jpg" width="100%"></div>
+      <div class="item -lg"><img src="images/cover-3.jpg" width="100%"></div>
+      <div class="item -lg"><img src="images/cover-4.jpg" width="100%"></div>
+
+    </div>
+
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/owl-carousel/owl-carousel/owl.carousel.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 

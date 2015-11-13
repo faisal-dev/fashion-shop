@@ -5,17 +5,36 @@ console.log('\'Allo \'Allo!'); // eslint-disable-line no-console
 
   $(document).ready(function() {
 
-    // Pageloader controller
+    // Simulate fake loader page
+    var
+      pageloader = $('#pageloader'),
+      svgElem = $('dc-spinner'),
+      body = $('#shop-theme');
+
     setTimeout(function() {
-      $('#dc-spinner').attr('class', 'svgloader _fade-out');
+      svgElem.attr('class', 'svgloader _fade-out');  // SVG don't have addClass().
+
       setTimeout(function() {
-        $('#pageloader')
+        pageloader
           .addClass('_fade-out')
           .bind("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", function() {
+            // hiding block when css animation finished.
             $(this).addClass('hidden');
+            // Set overflow-y auto;
+            body.addClass('_loaded');
           });
       }, 500);
+
     }, 5000);
+
+    // Owl banner slider controller
+    var owl = $("#owl-banner");
+
+    owl.owlCarousel({
+      navigation : true,
+      singleItem : true,
+      transitionStyle : "fade"
+    });
 
   });
 

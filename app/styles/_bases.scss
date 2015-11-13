@@ -1,4 +1,3 @@
-
 html,
 body {
   height: 100%;
@@ -9,8 +8,7 @@ body {
 body {
   color: $p-font;
   font-family: 'Raleway', sans-serif;
-  overflow-x: hidden;
-  overflow-y: auto;
+  overflow: hidden;
 }
 
 
