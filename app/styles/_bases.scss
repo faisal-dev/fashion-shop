@@ -7,6 +7,7 @@ body {
 
 body {
   font-family: 'Raleway', sans-serif;
+  color: $p-font;
   overflow-x: hidden;
   overflow-y: auto;
 }
@@ -15,6 +16,7 @@ body {
 // font h1 - h6 style
 @for $i from 1 through 6 {
   h#{$i} {
+    color: $h-font;
     font-family: 'Montserrat', sans-serif;
   }
 }

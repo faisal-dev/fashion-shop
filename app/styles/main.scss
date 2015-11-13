@@ -1,5 +1,13 @@
 $icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
 
+// BASE COLOR
+$black: #333;
+$gray: #848484;
+
+// FONT COLOR
+$h-font: $black;
+$p-font: $gray;
+
 // bower:scss
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 // endbower
