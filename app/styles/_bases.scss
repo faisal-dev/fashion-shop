@@ -1,13 +1,14 @@
 
 html,
 body {
+  height: 100%;
   position: relative;
   width: 100%;
 }
 
 body {
-  font-family: 'Raleway', sans-serif;
   color: $p-font;
+  font-family: 'Raleway', sans-serif;
   overflow-x: hidden;
   overflow-y: auto;
 }

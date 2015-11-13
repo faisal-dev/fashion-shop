@@ -3,6 +3,7 @@ $icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
 // BASE COLOR
 $black: #333;
 $gray: #848484;
+$midnight: #222428;
 
 // FONT COLOR
 $h-font: $black;
@@ -16,3 +17,6 @@ $p-font: $gray;
 
 // base
 @import 'bases';
+
+// Components
+@import 'preloader-block';
