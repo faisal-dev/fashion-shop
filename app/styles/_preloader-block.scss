@@ -1,3 +1,8 @@
+.preloader-block,
+.svgloader {
+  opacity: 1;
+}
+
 .preloader-block {
   @include size(100%, 100%);
 
@@ -8,7 +13,8 @@
   display: flex;
   justify-content: center;
 
-  > .svg {
+  > .svgloader {
     @include size(20em, 20em);
   }
 }
+

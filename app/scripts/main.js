@@ -7,9 +7,14 @@ console.log('\'Allo \'Allo!'); // eslint-disable-line no-console
 
     // Pageloader controller
     setTimeout(function() {
-      $('#pageloader').fadeOut('slow', function() {
-        $(this).addClass('.hidden');
-      });
+      $('#dc-spinner').attr('class', 'svgloader _fade-out');
+      setTimeout(function() {
+        $('#pageloader')
+          .addClass('_fade-out')
+          .bind("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", function() {
+            $(this).addClass('hidden');
+          });
+      }, 500);
     }, 5000);
 
   });
