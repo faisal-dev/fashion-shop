@@ -1,0 +1,19 @@
+
+html,
+body {
+  width: 100%;
+  position: relative;
+}
+
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+
+// font h1 - h6 style
+@for $i from 1 through 6 {
+  h#{$i} {
+    font-family: 'Montserrat', sans-serif;
+  }
+}
