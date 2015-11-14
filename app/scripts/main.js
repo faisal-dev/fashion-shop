@@ -29,6 +29,12 @@ console.log('\'Allo \'Allo!'); // eslint-disable-line no-console
 
   $(document).ready(function() {
 
+    // User tabs
+    $('#userTabs a').click(function (e) {
+      e.preventDefault();
+      $(this).tab('show');
+    })
+
     // Owl banner slider controller
     var
       owl = $('#owl-banner'),

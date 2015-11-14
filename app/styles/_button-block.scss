@@ -1,6 +1,12 @@
 .btn-block {
   color: $black;
 
+  &.-minimal {
+    border-radius: 50%;
+    padding: 1.2rem 1.75rem;
+    border: 1px solid rgba($black, .6);
+  }
+
   &.-circle {
     background-color: $light-gray;
     border-radius: 50%;
