@@ -36,10 +36,10 @@
     display: block;
     float: right;
     margin-top: .8rem;
+    position: relative;
   }
 
-  > .menu > .button {
-    // margin-top: .5rem;
+  > .menu > .button:not(:last-child) {
     margin-right: .5rem;
   }
 
