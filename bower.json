@@ -13,6 +13,14 @@
         "assets/fonts/bootstrap/*",
         "assets/javascripts/bootstrap.js"
       ]
+    },
+    "owl-carousel": {
+      "main": [
+        "owl-carousel/owl.carousel.js",
+        "owl-carousel/owl.carousel.css",
+        "owl-carousel/owl.theme.css",
+        "owl-carousel/owl.transitions.css"
+      ]
     }
   },
   "devDependencies": {
