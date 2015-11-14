@@ -1,21 +1,4 @@
 $icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
-// PLACEHOLDER
-%block-content {
-  display: block;
-  content: '';
-  position: absolute;
-}
-
-
-// BASE COLOR
-$black: #333;
-$gray: #848484;
-$midnight: #222428;
-$white: #fff;
-
-// FONT COLOR
-$h-font: $black;
-$p-font: $gray;
 
 // bower:scss
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
@@ -25,6 +8,7 @@ $p-font: $gray;
 // import all scss
 
 // base
+@import 'variables';
 @import 'bases';
 @import 'helpers';
 

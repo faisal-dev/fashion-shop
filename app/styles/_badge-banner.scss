@@ -3,6 +3,7 @@
   z-index: 99;
   padding: 2rem;
   text-align: center;
+  text-shadow: 0 2px 5px rgba($midnight, .2);
 
   > .title {
     color: $white;
@@ -23,30 +24,60 @@
     font-size: 2em;
   }
 
-  &:before,
-  &:after {
+  &:before{
     @extend %block-content;
-    left: 0;
-    top: 0;
-    z-index: -1;
-    // transform: rotate(-45deg);
-  }
-
-  &:before {
     @include size(100%, 100%);
     background-color: rgba($white, .16);
     box-shadow: 0 0 0 1px rgba($white, .3);
-    margin: 1rem;
-  }
-
-  &:after {
-    @include size(192px, 200px);
-    // border: 2px solid $black;
+    left: 0;
+    top: 0;
+    z-index: -1;
   }
 
   &.-v1 {
-    top: 0;
     left: 50%;
+    top: 0;
     transform: translateX(-50%);
+  }
+
+  @include mappy-query(tablet) {
+  // stuff
+    > .title {
+      font-size: 10em;
+    }
+
+    &.-v1 {
+      top: 6rem;
+    }
+  }
+
+  @include mappy-query(desktop) {
+  // stuff
+    > .title {
+      font-size: 15em;
+    }
+
+    > .meta {
+      font-size: 2em;
+    }
+
+    &.-v1 {
+      top: 8rem;
+    }
+  }
+
+  @include mappy-query(tv) {
+  // stuff
+    > .title {
+      font-size: 20em;
+    }
+
+    > .meta {
+      font-size: 2em;
+    }
+
+    &.-v1 {
+      top: 11rem;
+    }
   }
 }
