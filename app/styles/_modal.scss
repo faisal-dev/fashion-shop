@@ -2,6 +2,7 @@
   &.-fullscreen > .modal-dialog {
     bottom: 0;
     margin: 0;
+    overflow: hidden;
     position: absolute;
     top: 0;
     width: 100%;
@@ -13,17 +14,30 @@
       border-radius: 0;
       box-shadow: 0;
       height: 100%;
+      overflow-y: scroll;
       padding-left: 1rem;
       padding-right: 1rem;
     }
 
     .modal-body > .main {
-      margin-top: 10rem;
+      // margin-top: 2rem;
     }
 
     .close {
-      margin-top: 2rem;
-      margin-right: 1rem;
+      margin-top: 1rem;
+      margin-right: .5rem;
+    }
+  }
+
+  @include mappy-query(tablet) {
+    .modal-body > .main {
+      margin-top: 13rem;
+    }
+  }
+
+  @include mappy-query(tv) {
+    .modal-body > .main {
+      margin-top: 18rem;
     }
   }
 }

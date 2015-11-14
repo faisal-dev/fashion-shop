@@ -1,0 +1,21 @@
+.form-block {
+
+  > .title {
+    margin-top: 4rem;
+  }
+
+  > .content {
+    margin-top: 2rem;
+  }
+
+  > .content > .form-group a {
+    display: block;
+    margin-top: 1rem;
+  }
+
+  > .content > .form-group > .form-control {
+    border-color: transparent transparent rgba($black, .2);
+    border-radius: 0;
+    box-shadow: none;
+  }
+}

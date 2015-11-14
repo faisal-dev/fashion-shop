@@ -171,7 +171,7 @@
           <button class="close" type="button" data-dismiss="modal" aria-label="Close">
             <span class="btn-block -minimal " aria-hidden="true">&times;</span>
           </button>
-          <div class="modal-body col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3">
+          <div class="modal-body col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-lg-4 col-lg-offset-4">
             <div class="main">
               <div class="row">
                 <div class="col-xs-12">
@@ -185,30 +185,51 @@
                   <div class="tab-content">
                     <div class="tab-pane active" id="sign-in" role="tabpanel">
                       <form class="form-block" role="form">
-                        <h1 class="heading-sans h3">I'm already a member</h1>
-                        <p>Consetetur sadipscing elitr sed diam nonumy eirmod tempor sadipscing.</p>
-                        <div class="form-group">
-                          <label for="lemail" class="control-label sr-only">Your username or email</label>
-                          <input type="email" class="form-control" id="lemail" placeholder="Your username or email">
-                        </div>
-                        <div class="form-group">
-                          <label for="lpassword" class="control-label sr-only">Your Password</label>
-                          <input type="password" class="form-control" id="lpassword" placeholder="Your Password">
-                        </div>
-                        <div class="form-group">
-                          <button type="submit" class="btn btn-default btn-block">Login</button>
-                        </div>
-                        <div class="form-group text-center">
-                          <div class="checkbox">
-                            <label><input type="checkbox"> Remember me</label>
-                            <a href="#">Lost Your Password?</a>
+                        <h2 class="title">I'm already a member</h2>
+                        <p class="meta">Consetetur sadipscing elitr sed diam nonumy eirmod tempor sadipscing.</p>
+                        <div class="content">
+                          <div class="form-group">
+                            <label class="control-label sr-only" for="lemail">Your username or email</label>
+                            <input class="form-control" id="lemail" type="email" placeholder="Your username or email">
+                          </div>
+                          <div class="form-group">
+                            <label class="control-label sr-only" for="lpassword">Your Password</label>
+                            <input class="form-control" id="lpassword" type="password" placeholder="Your Password">
+                          </div>
+                          <div class="form-group _mg-top-sm">
+                            <button class="btn btn-default btn-block" type="submit">Login</button>
+                          </div>
+                          <div class="form-group text-center">
+                            <div class="checkbox">
+                              <label><input type="checkbox"> Remember me</label>
+                              <a href="#">Lost Your Password?</a>
+                            </div>
                           </div>
                         </div>
                       </form>
                     </div>
                     <div class="tab-pane" id="sign-up" role="tabpanel">
-                      <h1>dsf</h1>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut minus eos ipsa ducimus sunt, nisi quae labore perspici</p>
+                      <form class="form-block" role="form">
+                        <h2 class="title">I'm new here</h2>
+                        <p class="meta">Consetetur sadipscing elitr sed diam nonumy eirmod tempor sadipscing.</p>
+                        <div class="content">
+                          <div class="form-group">
+                            <label class="control-label sr-only" for="yname">Your Name</label>
+                            <input class="form-control" type="text" name="yname" id="yname" placeholder="Your Name">
+                          </div>
+                          <div class="form-group">
+                            <label class="control-label sr-only" for="resemail">Your Email</label>
+                            <input class="form-control" id="resemail" type="email" placeholder="Your Email">
+                          </div>
+                          <div class="form-group">
+                            <label class="control-label sr-only" for="respassw">Your Password</label>
+                            <input class="form-control" id="respassw" type="password" placeholder="Your Password">
+                          </div>
+                          <div class="form-group _mg-top-sm">
+                            <button class="btn btn-default btn-block" type="submit">Register</button>
+                          </div>
+                        </div>
+                      </form>
                     </div>
                   </div>
                 </div>
