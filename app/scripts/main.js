@@ -32,7 +32,8 @@ console.log('\'Allo \'Allo!'); // eslint-disable-line no-console
     // Owl banner slider controller
     var
       owl = $('#owl-banner'),
-      time = 7, // time in seconds
+      time = 15, // time in seconds
+      badgeBanner = $('.badge-banner'),
 
       $progressBar,
       $bar,
@@ -101,12 +102,36 @@ console.log('\'Allo \'Allo!'); // eslint-disable-line no-console
 
     //moved callback
     function moved(){
+      var curBanner = this.owl.currentItem;
+
+      // Add anim to badge elem
+      addAnim(curBanner);
       //clear interval
       clearTimeout(tick);
       //start again
       start();
     }
 
+    // Add animation to badge
+    function addAnim(curBanner) {
+      var
+        $title = $(badgeBanner[curBanner]).find('.title'),
+        $meta = $(badgeBanner[curBanner]).find('.meta');
+
+      // Add anim to title banner
+      $title
+        .addClass('animated bounceIn')
+        .bind('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+          $(this).removeClass('animated bounceIn');
+        });
+
+      // Add anim to meta banner
+      $meta
+        .addClass('animated fadeIn')
+        .bind('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+          $(this).removeClass('animated fadeIn');
+        });
+    }
   });
 
 })(jQuery);

@@ -1,4 +1,5 @@
 .badge-banner {
+  @include size(20em, 20em);
   position: absolute;
   z-index: 99;
   padding: 2rem;
@@ -16,6 +17,7 @@
     font-size: 1em;
     font-weight: 800;
     margin-bottom: 0;
+    animation-delay: 1s;
   }
 
   .hilight {
@@ -41,6 +43,7 @@
   }
 
   @include mappy-query(tablet) {
+    @include size(40em, 20em);
   // stuff
     > .title {
       font-size: 10em;
@@ -52,7 +55,8 @@
   }
 
   @include mappy-query(desktop) {
-  // stuff
+    @include size(60em, 40em)
+    // stuff
     > .title {
       font-size: 15em;
     }
@@ -67,7 +71,8 @@
   }
 
   @include mappy-query(tv) {
-  // stuff
+    @include size(80em, 40em)
+    // stuff
     > .title {
       font-size: 20em;
     }
