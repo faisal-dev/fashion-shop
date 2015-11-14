@@ -1,0 +1,60 @@
+.menu-bar {
+  @include clearfix();
+  border-bottom: 1px solid rgba($black, .1);
+  height: 60px;
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
+  position: relative;
+
+  > .brand {
+    display: block;
+    float: left;
+    margin-right: 1rem;
+    padding-bottom: 2.4rem;
+    padding-top: 2.4rem;
+
+    h1 {
+      font-size: .8em;
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+  }
+
+  > .menu {
+    @include clearfix();
+    list-style: none;
+    margin-bottom: 0;
+    padding-left: 0;
+  }
+
+  > .menu.-desktop {
+    display: none;
+    float: left;
+  }
+
+  > .menu.-user {
+    display: block;
+    float: right;
+    margin-top: .8rem;
+  }
+
+  > .menu > .button {
+    // margin-top: .5rem;
+    margin-right: .5rem;
+  }
+
+  li {
+    float: left;
+  }
+
+  li > a {
+    text-decoration: none;
+  }
+
+  // li > a {
+  //   color: $black;
+  //   display: block;
+  //   padding: 2rem;
+  //   text-decoration: none;
+  // }
+}
