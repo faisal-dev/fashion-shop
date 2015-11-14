@@ -1,9 +1,17 @@
 $icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
+// PLACEHOLDER
+%block-content {
+  display: block;
+  content: '';
+  position: absolute;
+}
+
 
 // BASE COLOR
 $black: #333;
 $gray: #848484;
 $midnight: #222428;
+$white: #fff;
 
 // FONT COLOR
 $h-font: $black;
@@ -11,14 +19,16 @@ $p-font: $gray;
 
 // bower:scss
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "bower_components/mappy-breakpoints/_mappy-breakpoints.scss";
 // endbower
 
 // import all scss
 
 // base
 @import 'bases';
+@import 'helpers';
 
 // Components
-@import 'helpers';
+@import 'badge-banner';
 @import 'owl-slider';
 @import 'preloader-block';

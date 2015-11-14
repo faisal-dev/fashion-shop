@@ -43,11 +43,13 @@ console.log('\'Allo \'Allo!'); // eslint-disable-line no-console
 
     //Init the carousel
     owl.owlCarousel({
+      autoPlay : false,
+      pagination : false,
       singleItem : true,
-      transitionStyle : 'fade',
-      afterInit : progressBar,
-      afterMove : moved,
-      startDragging : pauseOnDragging
+      // transitionStyle : 'fade',
+      // afterInit : progressBar,
+      // afterMove : moved,
+      // startDragging : pauseOnDragging
     });
 
     //Init progressBar where elem is $('#owl-banner')
