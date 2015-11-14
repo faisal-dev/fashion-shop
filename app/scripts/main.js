@@ -3,8 +3,7 @@ console.log('\'Allo \'Allo!'); // eslint-disable-line no-console
 ;(function($) {
   'use strict'
 
-  $(document).ready(function() {
-
+  $(window).load(function() {
     // Simulate fake loader page
     var
       pageloader = $('#pageloader'),
@@ -26,6 +25,9 @@ console.log('\'Allo \'Allo!'); // eslint-disable-line no-console
       }, 500);
 
     }, 5000);
+  });
+
+  $(document).ready(function() {
 
     // Owl banner slider controller
     var owl = $("#owl-banner");
