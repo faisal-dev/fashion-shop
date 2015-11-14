@@ -5,13 +5,12 @@
 
 .preloader-block {
   @include size(100%, 100%);
-
   align-items: center;
-  background: {
-    color: $midnight;
-  }
+  background-color: $midnight;
   display: flex;
   justify-content: center;
+  position: absolute;
+  z-index: 999;
 
   > .svgloader {
     @include size(20em, 20em);
