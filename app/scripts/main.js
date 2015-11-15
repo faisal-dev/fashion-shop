@@ -16,7 +16,7 @@ console.log('\'Allo \'Allo!'); // eslint-disable-line no-console
       setTimeout(function() {
         pageloader
           .addClass('_fade-out')
-          .bind("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", function() {
+          .bind('transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd', function() {
             // hiding block when css animation finished.
             $(this).addClass('hidden');
             // Set overflow-y auto;
@@ -28,6 +28,28 @@ console.log('\'Allo \'Allo!'); // eslint-disable-line no-console
   });
 
   $(document).ready(function() {
+
+    // Search toggle
+    var
+      $searchForm = $('.search-toggle');
+
+    $searchForm.on('click', function(event) {
+      event.preventDefault();
+      /* Act on the event */
+      $(this)
+        .find('.form').removeClass('-hide').addClass('-show')
+        .find('.input').addClass('actived');
+    });
+
+    $searchForm.on('click', '.close-btn', function(event) {
+      event.preventDefault();
+      /* Act on the event */
+      $searchForm
+        .find('.form').removeClass('-show').addClass('-hide')
+        .find('.input').removeClass('actived');
+
+      event.stopPropagation();
+    });
 
     // User tabs
     $('#userTabs a').click(function (e) {

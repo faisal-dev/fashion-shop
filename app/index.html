@@ -17,10 +17,10 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:300">
 
     <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
     <link rel="stylesheet" href="/bower_components/owl-carousel/owl-carousel/owl.carousel.css">
     <link rel="stylesheet" href="/bower_components/owl-carousel/owl-carousel/owl.transitions.css">
     <link rel="stylesheet" href="/bower_components/owl-carousel/owl-carousel/owl.theme.css">
-    <!-- bower:css -->
     <link rel="stylesheet" href="/bower_components/animate.css/animate.css" />
     <!-- endbower -->
     <!-- endbuild -->
@@ -146,17 +146,20 @@
         <li><a href="home.html">CONTACT</a></li>
       </ul>
       <ul class="menu -user">
-        <li class="button -extended" id="search-btn">
-          <!-- <input class="" type="text"> -->
-          <span class="btn-block -circle glyphicon glyphicon-search"></span>
+        <li class="button search-toggle">
+          <form class="form">
+            <input class="input" type="text" placeholder="Search here">
+            <span class="icon btn btn-block -sm -circle glyphicon glyphicon-search"></span>
+            <span class="close-btn glyphicon glyphicon-remove"></span>
+          </form>
         </li>
         <li class="button">
-          <a class="btn-block -circle" type="button" data-toggle="modal" data-target="#userModal"   href="home.html">
+          <a class="btn btn-block -sm -circle" type="button" data-toggle="modal" data-target="#userModal"   href="home.html">
             <span class="glyphicon glyphicon-shopping-cart"></span>
           </a>
         </li>
         <li class="button">
-          <a class="btn-block -menu" href="home.html">
+          <a class="btn btn-block -menu" href="home.html">
             <span class="glyphicon glyphicon-menu-hamburger"></span>
             MENU
           </a>
@@ -167,8 +170,8 @@
     <div class="modal -fullscreen fade" id="userModal" role="dialog" aria-labelledby="gridSystemModalLabel">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
-          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-            <span class="btn-block -minimal " aria-hidden="true">&times;</span>
+          <button class="close btn-block -md -minimal" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
           </button>
           <div class="modal-body col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-lg-4 col-lg-offset-4">
             <div class="main">
