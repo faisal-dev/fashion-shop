@@ -58,6 +58,14 @@ console.log('\'Allo \'Allo!'); // eslint-disable-line no-console
       $(this).tab('show');
     })
 
+    // Mobile menu
+    $('.dropdown-lists').on('click', '.header',function(event) {
+      event.preventDefault();
+      /* Act on the event */
+      $(this).next().toggleClass('actived');
+      event.stopPropagation();
+    });
+
     // Owl banner slider controller
     var
       owl = $('#owl-banner'),

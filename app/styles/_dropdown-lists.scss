@@ -1,12 +1,24 @@
+.dropdown-lists {
+  list-style: none;
+}
+
 .dropdown-lists.-main {
   > .header {
-    color: rgba($black, .8);
+    color: rgba($black, .9);
     font-weight: 800;
   }
 }
 
+
+.dropdown-lists.-sub,
+.dropdown-lists.-subsub {
+  display: none;
+  font-weight: 400
+}
+
 .dropdown-lists.-sub {
-  font-weight: 400;
+  padding-left: 3rem;
+
   > li > a {
     color: rgba($black, .7);
     font-size: .8em;
@@ -14,8 +26,14 @@
 }
 
 .dropdown-lists.-subsub {
+  padding-left: 1.5rem;
+
   > li > a {
     color: rgba($black, .6);
     font-size: .6em;
   }
+}
+
+.dropdown-lists.actived {
+  display: block;
 }
