@@ -21,8 +21,14 @@
   }
 
   > .thumb.-lg {
+    @include mappy-query(tablet) {
+      padding-bottom: 47rem;
+    }
+    @include mappy-query(desktop) {
+      padding-bottom: 47rem;
+    }
     @include mappy-query(tv) {
-      padding-bottom: 68rem;
+      padding-bottom: 68.2rem;
     }
   }
 
