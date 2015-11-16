@@ -51,4 +51,8 @@
     text-decoration: none;
   }
 
+  @include mappy-query(tv) {
+    padding-left: 20rem;
+    padding-right: 20rem;
+  }
 }

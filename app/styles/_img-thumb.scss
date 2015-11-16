@@ -1,0 +1,65 @@
+.img-thumb {
+  @include clearfix();
+  position: relative;
+  margin-bottom: 1rem;
+
+  > .img {
+    @include clearfix();
+    height: 0;
+    overflow: hidden;
+  }
+
+  > .content {
+    bottom: 0;
+    position: absolute;
+  }
+
+  > .overlay {
+    @extend %block-content;
+    @include size(100%, 100%);
+    border: 3px solid rgba($white, .8);
+    z-index: 99;
+  }
+}
+
+.img-thumb.-lg {
+  > .img {
+    padding-bottom: 28rem;
+
+    img {
+      transform: translateY(0);
+    }
+
+    @include mappy-query(tv) {
+      padding-bottom: 68rem;
+    }
+  }
+}
+
+.img-thumb.-sm {
+  > .img {
+    padding-bottom: 28rem;
+
+    img {
+      transform: translateY(0);
+    }
+
+    @include mappy-query(tv) {
+      padding-bottom: 34.2rem;
+    }
+  }
+}
+
+.img-thumb.-wide {
+  > .img {
+    padding-bottom: 28rem;
+
+    img {
+      transform: translateY(0);
+    }
+
+    @include mappy-query(tv) {
+      padding-bottom: 33rem;
+    }
+  }
+}

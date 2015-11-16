@@ -20,6 +20,7 @@
     }
 
     .close {
+      line-height: 0;
       margin-top: 1rem;
       margin-right: .5rem;
     }
@@ -36,5 +37,9 @@
       margin-top: 18rem;
     }
   }
+}
+
+.modal-open {
+  overflow: hidden !important;
 }
 

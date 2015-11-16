@@ -1,0 +1,26 @@
+.text-box {
+  padding: 1rem;
+
+  > .hilight {
+    font-size: 1.2em;
+    font-weight: 800;
+  }
+
+  > .meta {
+    font-size: 1.5em;
+    margin-bottom: 0;
+  }
+}
+
+.text-box.-white {
+  width: 100%;
+
+  > .title {
+    margin-top: 13rem;
+  }
+
+  > .title,
+  > .meta {
+    color: $white;
+  }
+}
