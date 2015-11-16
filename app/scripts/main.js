@@ -2,32 +2,52 @@ console.log('\'Allo \'Allo!'); // eslint-disable-line no-console
 
 ;(function($) {
   'use strict'
+  var
+    $body = $('#shop-theme'),
+    $document = $(document),
+    $window = $(window);
 
-  // $(window).load(function() {
-  //   // Simulate fake loader page
-  //   var
-  //     pageloader = $('#pageloader'),
-  //     svgElem = $('dc-spinner'),
-  //     body = $('#shop-theme');
 
-  //   setTimeout(function() {
-  //     svgElem.attr('class', 'svgloader _fade-out');  // SVG don't have addClass().
+  $window.load(function() {
+    // Simulate fake loader page
+    var
+      pageloader = $('#pageloader'),
+      svgElem = $('dc-spinner');
 
-  //     setTimeout(function() {
-  //       pageloader
-  //         .addClass('_fade-out')
-  //         .bind('transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd', function() {
-  //           // hiding block when css animation finished.
-  //           $(this).addClass('hidden');
-  //           // Set overflow-y auto;
-  //           body.addClass('_loaded');
-  //         });
-  //     }, 500);
+    setTimeout(function() {
+      svgElem.attr('class', 'svgloader _fade-out');  // SVG don't have addClass().
 
-  //   }, 5000);
-  // });
+      setTimeout(function() {
+        pageloader
+          .addClass('_fade-out')
+          .bind('transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd', function() {
+            // hiding block when css animation finished.
+            $(this).addClass('hidden');
+            // Set overflow-y auto;
+            // body.addClass('_loaded');
+          });
+      }, 500);
 
-  $(document).ready(function() {
+    }, 5000);
+  });
+
+  $document.ready(function() {
+
+    // Smooth scroll on mouse
+
+
+    // Landing page
+    $('#landing-page').on('click', '.icon-button', function(event) {
+      event.preventDefault();
+      /* Act on the event */
+      $body
+        .addClass('_slideup')
+        .bind('transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd', function(event) {
+          /* Act on the event */
+          $body.addClass('_loaded');
+        });;
+    });
+
 
     // Search toggle
     // Need to refactory this search component

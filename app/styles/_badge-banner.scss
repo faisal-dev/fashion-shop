@@ -1,7 +1,4 @@
 .badge-banner {
-  @include size(20em, 20em);
-  position: absolute;
-  z-index: 99;
   padding: 2rem;
   text-align: center;
   text-shadow: 0 2px 5px rgba($midnight, .2);
@@ -26,63 +23,95 @@
     font-size: 2em;
   }
 
-  &:before{
-    @extend %block-content;
-    @include size(100%, 100%);
-    background-color: rgba($white, .16);
-    box-shadow: 0 0 0 1px rgba($white, .3);
-    left: 0;
-    top: 0;
-    z-index: -1;
+  // =================================
+  // Hero style badge
+  //==================================
+  &.-hero {
+    > .title {
+      font-size: 6em;
+    }
+
+    > .meta {
+      font-size: 1.5em;
+    }
+
+    @include mappy-query(tablet) {
+      > .title {
+        font-size: 8em;
+      }
+    }
   }
 
+  // =================================
+  // v1 style badge
+  //==================================
   &.-v1 {
+    @include size(20em, 20em);
     left: 50%;
+    position: absolute;
     top: 0;
     transform: translateX(-50%);
-  }
+    z-index: 100;
 
-  @include mappy-query(tablet) {
-    @include size(40em, 20em);
-  // stuff
-    > .title {
-      font-size: 10em;
+    &:before{
+      @extend %block-content;
+      @include size(100%, 100%);
+      background-color: rgba($white, .16);
+      box-shadow: 0 0 0 1px rgba($white, .3);
+      left: 0;
+      top: 0;
+      z-index: -1;
     }
 
-    &.-v1 {
-      top: 6rem;
-    }
-  }
-
-  @include mappy-query(desktop) {
-    @include size(60em, 40em)
-    // stuff
-    > .title {
-      font-size: 15em;
+    @include mappy-query(phone) {
+      > .meta {
+        margin-top: 0;
+      }
     }
 
-    > .meta {
-      font-size: 2em;
+    @include mappy-query(tablet) {
+      @include size(40em, 20em);
+      // stuff
+      > .title {
+        font-size: 10em;
+      }
+
+      &.-v1 {
+        top: 6rem;
+      }
     }
 
-    &.-v1 {
-      top: 8rem;
-    }
-  }
+    @include mappy-query(desktop) {
+      @include size(60em, 40em)
+      // stuff
+      > .title {
+        font-size: 15em;
+      }
 
-  @include mappy-query(tv) {
-    @include size(80em, 40em)
-    // stuff
-    > .title {
-      font-size: 20em;
+      > .meta {
+        font-size: 2em;
+      }
+
+      &.-v1 {
+        top: 8rem;
+      }
     }
 
-    > .meta {
-      font-size: 2em;
-    }
+    @include mappy-query(tv) {
+      @include size(80em, 40em)
+      // stuff
+      > .title {
+        font-size: 20em;
+      }
 
-    &.-v1 {
-      top: 11rem;
+      > .meta {
+        font-size: 2em;
+      }
+
+      &.-v1 {
+        top: 11rem;
+      }
     }
   }
 }
+
