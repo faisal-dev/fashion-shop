@@ -1,6 +1,12 @@
+// =================================
+// Textbox defaults
+//==================================
 .text-box {
   padding: 1rem;
+  position: relative;
+  width: 100%;
 
+  // Textbox title
   > .title > .hilight {
     display: block;
     font-size: .9em;
@@ -10,18 +16,35 @@
     }
   }
 
+  // Textbox meta
   > .meta {
     font-size: 1.5em;
     margin-bottom: 0;
   }
+
+  // Small text
+  &.-sm > .title {
+    font-size: 1.8em;
+  }
+
+  &.-sm > .title > .hilight {
+    font-size: 1em;
+    @include mappy-query(tv) {
+      font-size: 1.2em;
+    }
+  }
 }
 
-.text-box.-white {
-  width: 100%;
 
-  > .title {
-    margin-top: 13rem;
-  }
+
+
+// =================================
+// Textbox detail
+//==================================
+.text-box.-overlay {
+  position: absolute;
+  bottom: 0;
+  z-index: 999;
 
   > .title,
   > .meta {

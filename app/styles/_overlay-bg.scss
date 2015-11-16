@@ -1,0 +1,26 @@
+.overlay-bg {
+  @extend %block-content;
+  @include size(100%, 100%);
+  z-index: 99;
+  transition: all .5s ease;
+
+  // =================================
+  // Default style hover
+  //==================================
+  &:hover {
+    background-color: rgba($midnight, .8);
+  }
+
+  // =================================
+  // V1 style hover
+  //==================================
+  &.-dark {
+    border: 3px solid rgba($white, .8);
+
+    &:hover {
+      background-color: rgba($midnight, .8);
+      transform: scale(.95, .95);
+    }
+  }
+
+}

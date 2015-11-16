@@ -1,0 +1,41 @@
+.img-feature {
+  @include clearfix();
+  position: relative;
+  margin-bottom: 1rem;
+
+  // =================================
+  // Thumb images
+  //==================================
+  > .thumb {
+    @include clearfix();
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 23rem;
+    position: relative;
+  }
+
+  > .thumb.-sm {
+    @include mappy-query(tv) {
+      padding-bottom: 34.2rem;
+    }
+  }
+
+  > .thumb.-lg {
+    @include mappy-query(tv) {
+      padding-bottom: 68rem;
+    }
+  }
+
+  > .thumb.-wide {
+    @include mappy-query(tv) {
+      padding-bottom: 33rem;
+    }
+  }
+
+  // =================================
+  // Feature contents
+  //==================================
+  > .content {
+
+  }
+}
