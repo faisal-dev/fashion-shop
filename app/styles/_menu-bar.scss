@@ -1,10 +1,15 @@
 .menu-bar {
   @include clearfix();
+  background-color: $white;
   border-bottom: 1px solid rgba($black, .1);
   height: 60px;
   padding-left: 1rem;
   padding-right: 1rem;
   position: relative;
+
+  &.-fixed {
+    position: fixed;
+  }
 
   > .brand {
     display: block;
