@@ -152,14 +152,14 @@
             <span class="icon btn btn-block -sm -circle glyphicon glyphicon-search"></span>
             <span class="close-btn glyphicon glyphicon-remove"></span>
           </form>
-        </li>
+        </li> <!-- // Need to refactory this search component -->
         <li class="button">
-          <a class="btn btn-block -sm -circle" type="button" data-toggle="modal" data-target="#userModal"   href="home.html">
-            <span class="glyphicon glyphicon-shopping-cart"></span>
+          <a class="btn btn-block -sm -circle" type="button" data-toggle="modal" data-target="#userModal">
+            <span class="glyphicon glyphicon-user"></span>
           </a>
         </li>
         <li class="button">
-          <a class="btn btn-block -menu" href="home.html">
+          <a class="btn btn-block -menu" type="button" data-toggle="modal" data-target="#menu-modal">
             <span class="glyphicon glyphicon-menu-hamburger"></span>
             MENU
           </a>
@@ -175,65 +175,61 @@
           </button>
           <div class="modal-body col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-lg-4 col-lg-offset-4">
             <div class="main">
-              <div class="row">
-                <div class="col-xs-12">
-                  <!-- Nav tabs -->
-                  <ul class="nav nav-tabs" id="userTabs" role="tablist">
-                    <li role="presentation" class="active"><a href="#sign-in" aria-controls="sign-in" role="tab" data-toggle="tab">SIGN IN</a></li>
-                    <li role="presentation"><a href="#sign-up" aria-controls="sign-up" role="tab" data-toggle="tab">SIGN UP</a></li>
-                  </ul>
+              <!-- Nav tabs -->
+              <ul class="nav nav-tabs" id="userTabs" role="tablist">
+                <li role="presentation" class="active"><a href="#sign-in" aria-controls="sign-in" role="tab" data-toggle="tab">SIGN IN</a></li>
+                <li role="presentation"><a href="#sign-up" aria-controls="sign-up" role="tab" data-toggle="tab">SIGN UP</a></li>
+              </ul>
 
-                  <!-- Tab panes -->
-                  <div class="tab-content">
-                    <div class="tab-pane active" id="sign-in" role="tabpanel">
-                      <form class="form-block" role="form">
-                        <h2 class="title">I'm already a member</h2>
-                        <p class="meta">Consetetur sadipscing elitr sed diam nonumy eirmod tempor sadipscing.</p>
-                        <div class="content">
-                          <div class="form-group">
-                            <label class="control-label sr-only" for="lemail">Your username or email</label>
-                            <input class="form-control" id="lemail" type="email" placeholder="Your username or email">
-                          </div>
-                          <div class="form-group">
-                            <label class="control-label sr-only" for="lpassword">Your Password</label>
-                            <input class="form-control" id="lpassword" type="password" placeholder="Your Password">
-                          </div>
-                          <div class="form-group _mg-top-sm">
-                            <button class="btn btn-default btn-block" type="submit">Login</button>
-                          </div>
-                          <div class="form-group text-center">
-                            <div class="checkbox">
-                              <label><input type="checkbox"> Remember me</label>
-                              <a href="#">Lost Your Password?</a>
-                            </div>
-                          </div>
+              <!-- Tab panes -->
+              <div class="tab-content">
+                <div class="tab-pane active" id="sign-in" role="tabpanel">
+                  <form class="form-block" role="form">
+                    <h2 class="title">I'm already a member</h2>
+                    <p class="meta">Consetetur sadipscing elitr sed diam nonumy eirmod tempor sadipscing.</p>
+                    <div class="content">
+                      <div class="form-group">
+                        <label class="control-label sr-only" for="lemail">Your username or email</label>
+                        <input class="form-control" id="lemail" type="email" placeholder="Your username or email">
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label sr-only" for="lpassword">Your Password</label>
+                        <input class="form-control" id="lpassword" type="password" placeholder="Your Password">
+                      </div>
+                      <div class="form-group _mg-top-sm">
+                        <button class="btn btn-default btn-block" type="submit">Login</button>
+                      </div>
+                      <div class="form-group text-center">
+                        <div class="checkbox">
+                          <label><input type="checkbox"> Remember me</label>
+                          <a href="#">Lost Your Password?</a>
                         </div>
-                      </form>
+                      </div>
                     </div>
-                    <div class="tab-pane" id="sign-up" role="tabpanel">
-                      <form class="form-block" role="form">
-                        <h2 class="title">I'm new here</h2>
-                        <p class="meta">Consetetur sadipscing elitr sed diam nonumy eirmod tempor sadipscing.</p>
-                        <div class="content">
-                          <div class="form-group">
-                            <label class="control-label sr-only" for="yname">Your Name</label>
-                            <input class="form-control" type="text" name="yname" id="yname" placeholder="Your Name">
-                          </div>
-                          <div class="form-group">
-                            <label class="control-label sr-only" for="resemail">Your Email</label>
-                            <input class="form-control" id="resemail" type="email" placeholder="Your Email">
-                          </div>
-                          <div class="form-group">
-                            <label class="control-label sr-only" for="respassw">Your Password</label>
-                            <input class="form-control" id="respassw" type="password" placeholder="Your Password">
-                          </div>
-                          <div class="form-group _mg-top-sm">
-                            <button class="btn btn-default btn-block" type="submit">Register</button>
-                          </div>
-                        </div>
-                      </form>
+                  </form>
+                </div>
+                <div class="tab-pane" id="sign-up" role="tabpanel">
+                  <form class="form-block" role="form">
+                    <h2 class="title">I'm new here</h2>
+                    <p class="meta">Consetetur sadipscing elitr sed diam nonumy eirmod tempor sadipscing.</p>
+                    <div class="content">
+                      <div class="form-group">
+                        <label class="control-label sr-only" for="yname">Your Name</label>
+                        <input class="form-control" type="text" name="yname" id="yname" placeholder="Your Name">
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label sr-only" for="resemail">Your Email</label>
+                        <input class="form-control" id="resemail" type="email" placeholder="Your Email">
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label sr-only" for="respassw">Your Password</label>
+                        <input class="form-control" id="respassw" type="password" placeholder="Your Password">
+                      </div>
+                      <div class="form-group _mg-top-sm">
+                        <button class="btn btn-default btn-block" type="submit">Register</button>
+                      </div>
                     </div>
-                  </div>
+                  </form>
                 </div>
               </div>
             </div>
@@ -241,6 +237,165 @@
         </div><!-- /.modal-content -->
       </div><!-- /.modal-dialog -->
     </div><!-- /.modal-login/regis -->
+
+    <div class="modal -fullscreen fade" id="menu-modal" role="dialog" aria-labelledby="gridSystemModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <button class="close btn-block -md -minimal" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <div class="modal-body col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-lg-4 col-lg-offset-4">
+            <div class="main">
+              <nav class="mobile-menu">
+                <ul class="menu nav">
+                  <li class="dropdown-lists -main">
+                    <a class="header" href="#">Home</a>
+                    <ul class="dropdown-lists -sub" style="display: none;">
+                      <li><a href="index.html">Home default</a></li>
+                      <li><a href="index-2.html">Home Version 2</a></li>
+                      <li><a href="index-3.html">Home Version 3</a></li>
+                      <li><a href="index-4.html">Home Version 4</a></li>
+                      <li><a href="index-5.html">Home Furniture</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown-lists -main active open">
+                    <a class="header" href="#">Men</a>
+                    <ul class="dropdown-lists -sub">
+                      <li><a href="#">New arrivals</a></li>
+                      <li><a href="#">Best Sellers</a></li>
+                      <li class="active">
+                        <a href="#">Dresses</a>
+                        <ul class="dropdown-lists -subsub">
+                          <li><a href="#">All Dresses</a></li>
+                          <li><a href="#">Maxi Dresses</a></li>
+                          <li><a href="#">Midi Dresses</a></li>
+                          <li><a href="#">Short Dresses</a></li>
+                          <li><a href="#">Little Black Dresses</a></li>
+                          <li><a href="#">Bodycon Dresses</a></li>
+                          <li><a href="#">Backless Dresses</a></li>
+                          <li><a href="#">Lace Dresses</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="#">Bags</a>
+                        <ul class="dropdown-lists -subsub">
+                          <li><a href="#">Hand Bags</a></li>
+                          <li><a href="#">Messenger Bags</a></li>
+                          <li><a href="#">Large Handbags</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="#">Tops</a>
+                        <ul class="dropdown-lists -subsub">
+                          <li><a href="#">Casual Tops</a></li>
+                          <li><a href="#">Dressy Tops</a></li>
+                          <li><a href="#">Sexy Tops</a></li>
+                          <li><a href="#">Sleeveless</a></li>
+                          <li><a href="#">Short Sleeve</a></li>
+                          <li><a href="#">Long Sleeve</a></li>
+                          <li><a href="#">Blouses and Shirts</a></li>
+                          <li><a href="#">Tank Tops</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="#">Accessories</a>
+                        <ul class="dropdown-lists -subsub">
+                          <li><a href="#">Handbags &amp; Purses</a></li>
+                          <li><a href="#">Clutches</a></li>
+                          <li><a href="#">Totes &amp; Backpacks</a></li>
+                          <li><a href="#">Sunglasses</a></li>
+                          <li><a href="#">Hats</a></li>
+                          <li><a href="#">Belts</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="dropdown-lists -main">
+                    <a class="header" href="#">Women</a>
+                    <ul class="dropdown-lists -sub" style="display: none;">
+                      <li><a href="#">New arrivals</a></li>
+                      <li><a href="#">Best Sellers</a></li>
+                      <li>
+                        <a href="#">Dresses</a>
+                        <ul class="dropdown-lists -subsub">
+                          <li><a href="#">All Dresses</a></li>
+                          <li><a href="#">Maxi Dresses</a></li>
+                          <li><a href="#">Midi Dresses</a></li>
+                          <li><a href="#">Short Dresses</a></li>
+                          <li><a href="#">Little Black Dresses</a></li>
+                          <li><a href="#">Bodycon Dresses</a></li>
+                          <li><a href="#">Backless Dresses</a></li>
+                          <li><a href="#">Lace Dresses</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="#">Bags</a>
+                        <ul class="dropdown-lists -subsub">
+                          <li><a href="#">Hand Bags</a></li>
+                          <li><a href="#">Messenger Bags</a></li>
+                          <li><a href="#">Large Handbags</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="#">Tops</a>
+                        <ul class="dropdown-lists -subsub">
+                          <li><a href="#">Casual Tops</a></li>
+                          <li><a href="#">Dressy Tops</a></li>
+                          <li><a href="#">Sexy Tops</a></li>
+                          <li><a href="#">Sleeveless</a></li>
+                          <li><a href="#">Short Sleeve</a></li>
+                          <li><a href="#">Long Sleeve</a></li>
+                          <li><a href="#">Blouses and Shirts</a></li>
+                          <li><a href="#">Tank Tops</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="#">Accessories</a>
+                        <ul class="dropdown-lists -subsub">
+                          <li><a href="#">Handbags &amp; Purses</a></li>
+                          <li><a href="#">Clutches</a></li>
+                          <li><a href="#">Totes &amp; Backpacks</a></li>
+                          <li><a href="#">Sunglasses</a></li>
+                          <li><a href="#">Hats</a></li>
+                          <li><a href="#">Belts</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="dropdown-lists -main">
+                    <a class="header" href="#">Shop</a>
+                    <ul class="dropdown-lists -sub">
+                      <li><a href="shop-products-grid.html">Products Grid</a></li>
+                      <li><a href="shop-products-grid-row.html">Products Grid Row</a></li>
+                      <li><a href="shop-products-grid-canvas-filter.html">Products Grid Canvas Filter</a></li>
+                      <li><a href="shop-products-grid-sidebar.html">Products Grid Sidebar</a></li>
+                      <li><a href="shop-products-list-sidebar.html">Product List Sidebar</a></li>
+                      <li><a href="shop-products-detail.html">Product Detail</a></li>
+                      <li><a href="shop-shopping-cart.html">Shopping Cart</a></li>
+                      <li><a href="shop-checkout.html">Checkout</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown-lists -main">
+                    <a class="header" href="#">Blog</a>
+                    <ul class="dropdown-lists -sub">
+                      <li><a href="blog-list-fullwidth.html">Blog List Fullwidth</a></li>
+                      <li><a href="blog-standard.html">Blog Standard</a></li>
+                      <li><a href="blog-single.html">Blog Single</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown-lists -main">
+                    <a href="#" class="header">Contact</a>
+                    <ul class="dropdown-lists -sub">
+                      <li><a href="contact-1.html">Contact V1</a></li>
+                      <li><a href="contact-2.html">Contact V2</a></li>
+                      <li><a href="contact-3.html">Contact V3</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </nav> <!-- /.mobile-menu -->
+            </div>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.menu-modal -->
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->

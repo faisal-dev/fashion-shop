@@ -30,6 +30,7 @@ console.log('\'Allo \'Allo!'); // eslint-disable-line no-console
   $(document).ready(function() {
 
     // Search toggle
+    // Need to refactory this search component
     var
       $searchForm = $('.search-toggle');
 
