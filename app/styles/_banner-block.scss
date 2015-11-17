@@ -1,0 +1,16 @@
+.banner-block {
+  > .content {
+    text-align: center;
+  }
+
+
+// Promotion1
+  &.-promotion {
+    background-image: url(../images/sale-banner.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: 0;
+  }
+}
+
+
