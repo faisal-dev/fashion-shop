@@ -118,6 +118,10 @@
       height: 600px;
     }
 
+    @include mappy-query(desktop) {
+      height: 600px;
+    }
+
     @include mappy-query(tv) {
       height: 800px;
     }

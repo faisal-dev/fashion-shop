@@ -12,5 +12,9 @@
 }
 
 ._slideup {
-	transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+
+.row {
+  position: relative;
 }

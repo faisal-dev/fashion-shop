@@ -28,6 +28,30 @@
 
 .text-box.-subscribe {
   @extend %text-box;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  .form-group {
+    margin-bottom: 0;
+  }
+
+  input {
+    width: 60%;
+    float: left;
+    margin-right: 2rem;
+  }
+
+  button {
+    float: left;
+  }
+
+  @include mappy-bp(large) {
+    border: 1px solid rgba($black, .2);
+    height: 100%;
+    position: absolute;
+    right: 0;
+    padding: 3rem;
+  }
 }
 
 
