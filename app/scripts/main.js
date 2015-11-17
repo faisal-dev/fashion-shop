@@ -165,7 +165,7 @@ console.log('\'Allo \'Allo!'); // eslint-disable-line no-console
 
     //moved callback
     function moved(){
-      var curBanner = this.owl.currentItem;
+      var curBanner = this.owl.currentItem + 1;
 
       // Add anim to badge elem
       addAnim(curBanner);
@@ -208,6 +208,16 @@ console.log('\'Allo \'Allo!'); // eslint-disable-line no-console
       items : 4,
       pagination : false
     });
+  });
+
+  // Promotions countdown
+  //--========================================================
+  $('#clock').countdown('2020/10/10', function(event) {
+    var $this = $(this).html(event.strftime(''
+      + '<span>%d<br>days</span>  '
+      + '<span>%H<br>hr</span>  '
+      + '<span>%M<br>min</span>  '
+      + '<span>%S<br>sec</span>'));
   });
 
 })(jQuery);

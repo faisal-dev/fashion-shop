@@ -1,15 +1,127 @@
 .banner-block {
+
   > .content {
+    @extend %text-box;
     text-align: center;
+
+    > .title {
+      color: $elegant-blue;
+      font-size: 1.5em;
+    }
+
+    > .title > .special {
+      color: $warm-pink;
+      display: block;
+      text-shadow: 2px 2px 2px rgba($black, .4);
+    }
+
+    > .meta {
+      background-color: $warm-blue;
+      color: $white;
+      display: inline-block;
+      padding: 1rem 3rem;
+    }
+
+    > .button {
+      background-color: $warm-blue;
+      border: 0;
+      border-radius: 50px;
+      color: $white;
+      padding: 1rem 3rem;
+      transition: all .5s ease;
+
+      &:hover {
+        background-color: lighten($warm-blue, 5%);
+      }
+    }
+
+    > .date-count {
+      margin-top: 2rem;
+      margin-bottom: 5rem;
+    }
+
+    > .date-count > span > span {
+      @include size(55px, 55px);
+      background-color: lighten($light-gray, 5%);
+      box-shadow: 1px 1px 1px 1px rgba($black, .6);
+      border-radius: 5px;
+      color: $midnight;
+      display: inline-block;
+      font-size: 1em;
+      margin-right: 1rem;
+      padding: .5rem;
+    }
+
+    @include mappy-query(tablet) {
+      margin-top: 5rem;
+
+      > .title {
+        font-size: 3em;
+      }
+
+      > .button {
+        font-size: 2em;
+      }
+
+      > .date-count > span > span {
+        @include size(100px, 100px);
+        font-size: 2em;
+      }
+    }
+
+    @include mappy-query(desktop) {
+      margin-top: 5rem;
+
+      > .title {
+        font-size: 3em;
+      }
+
+      > .button {
+        font-size: 2em;
+      }
+
+      > .date-count > span > span {
+        @include size(100px, 100px);
+        font-size: 2em;
+      }
+    }
+
+
+    @include mappy-query(tv) {
+      margin-left: 30%;
+
+      > .title {
+        font-size: 3.5em;
+      }
+
+      > .button {
+        font-size: 2em;
+      }
+
+      > .date-count > span > span {
+        @include size(100px, 100px);
+        font-size: 2em;
+      }
+    }
+
   }
 
 
-// Promotion1
+  // Promotion1
   &.-promotion {
     background-image: url(../images/sale-banner.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    height: 400px;
     top: 0;
+
+    @include mappy-query(tablet) {
+      height: 600px;
+    }
+
+    @include mappy-query(tv) {
+      height: 800px;
+    }
   }
 }
 
