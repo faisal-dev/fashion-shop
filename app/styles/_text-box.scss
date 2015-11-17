@@ -4,9 +4,7 @@
 .text-box {
   padding: 1rem;
   position: relative;
-  width: 100%;
 
-  // Textbox title
   > .title > .hilight {
     display: block;
     font-size: .9em;
@@ -49,4 +47,56 @@
   position: absolute;
   bottom: 0;
   z-index: 999;
+}
+
+
+// =================================
+// Textbox with headline
+//==================================
+%text-box.-headline {
+
+  &:before,
+  &:after {
+    @extend %block-content;
+    @include size(100%, 1px);
+    background-color: $black;
+    top: 2.8rem;
+    width: 10%;
+  }
+
+  &:before {
+    left: 5%;
+  }
+
+  &:after {
+    right: 5%;
+  }
+
+  // Textbox title
+  > .title {
+    display: inline-block;
+    line-height: 1;
+    position: relative;
+
+    &:before,
+    &:after {
+      @extend %block-content;
+      background-color: $black;
+    }
+
+    &:before,
+    &:after {
+      @include size(15px, 15px);
+      border-radius: 50px;
+      top:0;
+    }
+
+    &:before {
+      left: -30px;
+    }
+
+    &:after {
+      right: -30px;
+    }
+  }
 }

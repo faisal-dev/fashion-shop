@@ -1,0 +1,14 @@
+.product-slider {
+  // Title
+  > .header {
+    @extend .text-box;
+    @extend %text-box.-headline;
+    text-align: center;
+    margin: 0 auto 5rem;
+    width: 100%;
+
+    @include mappy-bp(medium) {
+      width: 60%;
+    }
+  }
+}

@@ -52,6 +52,7 @@ console.log('\'Allo \'Allo!'); // eslint-disable-line no-console
 
     // Search toggle
     // Need to refactory this search component
+    // ==========================================================
     var
       $searchForm = $('.search-toggle');
 
@@ -79,7 +80,9 @@ console.log('\'Allo \'Allo!'); // eslint-disable-line no-console
       $(this).tab('show');
     })
 
+
     // Mobile menu
+    //==========================================================
     $('.dropdown-lists').on('click', '.header',function(event) {
       event.preventDefault();
       /* Act on the event */
@@ -87,7 +90,9 @@ console.log('\'Allo \'Allo!'); // eslint-disable-line no-console
       event.stopPropagation();
     });
 
+
     // Owl banner slider controller
+    //==========================================================
     var
       owl = $('#owl-banner'),
       time = 15, // time in seconds
@@ -190,6 +195,17 @@ console.log('\'Allo \'Allo!'); // eslint-disable-line no-console
           $(this).removeClass('animated fadeIn');
         });
     }
+
+
+    // Product wol slider
+    //=========================================================
+    $('#owl-product-1').owlCarousel({
+      items : 4
+    });
+
+    $('#owl-product-2').owlCarousel({
+      items : 4
+    });
   });
 
 })(jQuery);
