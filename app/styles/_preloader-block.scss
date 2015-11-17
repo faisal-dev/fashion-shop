@@ -10,7 +10,7 @@
   display: flex;
   justify-content: center;
   position: absolute;
-  z-index: 999;
+  z-index: 10000;
 
   > .svgloader {
     @include size(20em, 20em);

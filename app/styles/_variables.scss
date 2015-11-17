@@ -5,6 +5,13 @@
   position: absolute;
 }
 
+%center-elem {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
 // BREAKPOINT SETUP
 $breakpoints: (
   'small': 481px,
@@ -25,6 +32,8 @@ $black: #333;
 $light-gray: #eee;
 $gray: #848484;
 $midnight: #222428;
+$warm-blue: #1b384c;
+$warm-sun: #f3e975;
 $white: #fff;
 
 // FONT COLOR

@@ -32,74 +32,108 @@
     <!-- endbuild -->
     
   </head>
-  <body id="shop-theme">
+  <body id="shop-theme" class="_loaded">
     <!--[if lt IE 10]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
     <!-- 
       TODO LISTS ref => http://pixelgeeklab.com/html/vy/index.html / http://demo.itcthemes.com/lena/html/ / http://hastech.company/html/maroko-preview/maroko/index.html
+                        http://www.webdesigncrowd.com/demo/streamline/
 
       1. Add preloader page - REF => http://codepen.io/digitalcraft/pen/JogGyb ! Svg animate is deprecated need to fix it.
           - Add / progressbar
           - Add / Title name
      -->
 
-    <div class="wrapper">
-      <div class="preloader-block" id="pageloader">
-        <svg
-          version="1.1"
-          class="svgloader"
-          id="dc-spinner"
-          xmlns="http://www.w3.org/2000/svg"
-          x="0px" y="0px"
-          width:"38"
-          height:"38"
-          viewBox="0 0 38 38"
-          preserveAspectRatio="xMinYMin meet">
-        <text x="14" y="21" font-family="Monaco" font-size="2px" style="letter-spacing:0.6" fill="grey">LOADING
-           <animate
-             attributeName="opacity"
-             values="0;1;0" dur="1.8s"
-             repeatCount="indefinite"/>
-        </text>
-        <path fill="#373a42" d="M20,35c-8.271,0-15-6.729-15-15S11.729,5,20,5s15,6.729,15,15S28.271,35,20,35z M20,5.203
-          C11.841,5.203,5.203,11.841,5.203,20c0,8.159,6.638,14.797,14.797,14.797S34.797,28.159,34.797,20
-          C34.797,11.841,28.159,5.203,20,5.203z">
-        </path>
-      
-        <path fill="#373a42" d="M20,33.125c-7.237,0-13.125-5.888-13.125-13.125S12.763,6.875,20,6.875S33.125,12.763,33.125,20
-          S27.237,33.125,20,33.125z M20,7.078C12.875,7.078,7.078,12.875,7.078,20c0,7.125,5.797,12.922,12.922,12.922
-          S32.922,27.125,32.922,20C32.922,12.875,27.125,7.078,20,7.078z">
-        </path>
-      
-        <path fill="#2AA198" stroke="#2AA198" stroke-width="0.6027" stroke-miterlimit="10" d="M5.203,20
-            c0-8.159,6.638-14.797,14.797-14.797V5C11.729,5,5,11.729,5,20s6.729,15,15,15v-0.203C11.841,34.797,5.203,28.159,5.203,20z">
-        <animateTransform
-              attributeName="transform"
-              type="rotate"
-              from="0 20 20"
-              to="360 20 20"
-              calcMode="spline"
-              keySplines="0.4, 0, 0.2, 1"
-              keyTimes="0;1"
-              dur="2s"
-              repeatCount="indefinite" />
-         </path>
-      
-        <path fill="#859900" stroke="#859900" stroke-width="0.2027" stroke-miterlimit="10" d="M7.078,20
-        c0-7.125,5.797-12.922,12.922-12.922V6.875C12.763,6.875,6.875,12.763,6.875,20S12.763,33.125,20,33.125v-0.203
-        C12.875,32.922,7.078,27.125,7.078,20z">
-         <animateTransform
+<!--     <div class="preloader-block" id="pageloader">
+      <svg
+        version="1.1"
+        class="svgloader"
+        id="dc-spinner"
+        xmlns="http://www.w3.org/2000/svg"
+        x="0px" y="0px"
+        width:"38"
+        height:"38"
+        viewBox="0 0 38 38"
+        preserveAspectRatio="xMinYMin meet">
+      <text x="14" y="21" font-family="Monaco" font-size="2px" style="letter-spacing:0.6" fill="grey">LOADING
+         <animate
+           attributeName="opacity"
+           values="0;1;0" dur="1.8s"
+           repeatCount="indefinite"/>
+      </text>
+      <path fill="#373a42" d="M20,35c-8.271,0-15-6.729-15-15S11.729,5,20,5s15,6.729,15,15S28.271,35,20,35z M20,5.203
+        C11.841,5.203,5.203,11.841,5.203,20c0,8.159,6.638,14.797,14.797,14.797S34.797,28.159,34.797,20
+        C34.797,11.841,28.159,5.203,20,5.203z">
+      </path>
+    
+      <path fill="#373a42" d="M20,33.125c-7.237,0-13.125-5.888-13.125-13.125S12.763,6.875,20,6.875S33.125,12.763,33.125,20
+        S27.237,33.125,20,33.125z M20,7.078C12.875,7.078,7.078,12.875,7.078,20c0,7.125,5.797,12.922,12.922,12.922
+        S32.922,27.125,32.922,20C32.922,12.875,27.125,7.078,20,7.078z">
+      </path>
+    
+      <path fill="#2AA198" stroke="#2AA198" stroke-width="0.6027" stroke-miterlimit="10" d="M5.203,20
+          c0-8.159,6.638-14.797,14.797-14.797V5C11.729,5,5,11.729,5,20s6.729,15,15,15v-0.203C11.841,34.797,5.203,28.159,5.203,20z">
+      <animateTransform
             attributeName="transform"
             type="rotate"
             from="0 20 20"
             to="360 20 20"
-            dur="1.8s"
+            calcMode="spline"
+            keySplines="0.4, 0, 0.2, 1"
+            keyTimes="0;1"
+            dur="2s"
             repeatCount="indefinite" />
-          </path>
-        </svg>
-      </div>  <!-- /#pageloader -->
+       </path>
+    
+      <path fill="#859900" stroke="#859900" stroke-width="0.2027" stroke-miterlimit="10" d="M7.078,20
+      c0-7.125,5.797-12.922,12.922-12.922V6.875C12.763,6.875,6.875,12.763,6.875,20S12.763,33.125,20,33.125v-0.203
+      C12.875,32.922,7.078,27.125,7.078,20z">
+       <animateTransform
+          attributeName="transform"
+          type="rotate"
+          from="0 20 20"
+          to="360 20 20"
+          dur="1.8s"
+          repeatCount="indefinite" />
+        </path>
+      </svg>
+    </div>   --><!-- /#pageloader -->
+
+    <nav class="menu-bar -fixed">
+      <a class="btn brand" href="home.html">
+        <h1>FASHION SHOP</h1>
+      </a>
+      <ul class="menu -desktop">
+        <li><a href="home.html">HOME</a></li>
+        <li><a href="home.html">SHOP</a></li>
+        <li><a href="home.html">BLOG</a></li>
+        <li><a href="home.html">CONTACT</a></li>
+      </ul>
+      <ul class="menu -user">
+        <li class="button search-toggle">
+          <form class="form">
+            <input class="input" type="text" placeholder="Search here">
+            <span class="icon btn btn-block -sm -circle glyphicon glyphicon-search"></span>
+            <span class="close-btn glyphicon glyphicon-remove"></span>
+          </form>
+        </li> <!-- // Need to refactory this search component -->
+        <li class="button">
+          <a class="btn btn-block -sm -circle" type="button" data-toggle="modal" data-target="#userModal">
+            <span class="glyphicon glyphicon-user"></span>
+          </a>
+        </li>
+        <li class="button">
+          <a class="btn btn-block -menu" type="button" data-toggle="modal" data-target="#menu-modal">
+            <span class="glyphicon glyphicon-menu-hamburger"></span>
+            MENU
+          </a>
+        </li>
+      </ul>
+    </nav> <!-- /.nav-bar -->
+
+    <div class="wrapper">
       
       <div class="mobile-landing" id="landing-page">
         <div class="overlay"></div>
@@ -149,46 +183,14 @@
         </div>
       </div> <!-- /#owl-banner -->
       
-      <nav class="menu-bar">
-        <a class="btn brand" href="home.html">
-          <h1>FASHION SHOP</h1>
-        </a>
-        <ul class="menu -desktop">
-          <li><a href="home.html">HOME</a></li>
-          <li><a href="home.html">SHOP</a></li>
-          <li><a href="home.html">BLOG</a></li>
-          <li><a href="home.html">CONTACT</a></li>
-        </ul>
-        <ul class="menu -user">
-          <li class="button search-toggle">
-            <form class="form">
-              <input class="input" type="text" placeholder="Search here">
-              <span class="icon btn btn-block -sm -circle glyphicon glyphicon-search"></span>
-              <span class="close-btn glyphicon glyphicon-remove"></span>
-            </form>
-          </li> <!-- // Need to refactory this search component -->
-          <li class="button">
-            <a class="btn btn-block -sm -circle" type="button" data-toggle="modal" data-target="#userModal">
-              <span class="glyphicon glyphicon-user"></span>
-            </a>
-          </li>
-          <li class="button">
-            <a class="btn btn-block -menu" type="button" data-toggle="modal" data-target="#menu-modal">
-              <span class="glyphicon glyphicon-menu-hamburger"></span>
-              MENU
-            </a>
-          </li>
-        </ul>
-      </nav> <!-- /.nav-bar -->
-      
-      <section class="section-block" id="call-to-action">
+      <section class="section-block -paper" id="call-to-action">
         <div class="body container">
           <div class="row">
             <div class="img-feature col-sm-6 ">
               <div class="thumb -lg">
-                <div class="overlay-bg -dark">
+                <div class="overlay-dark">
                   <span class="icon glyphicon glyphicon-zoom-in"></span>
-                  <div class="text-box -overlay">
+                  <div class="text">
                     <h1 class="title">SWEET<span class="hilight">COLLECTIONS</span></h1>
                     <p class="meta">Save up to 30% off</p>
                   </div>
@@ -200,9 +202,9 @@
               <div class="row">
                 <div class="img-feature col-sm-6">
                   <div class="thumb -sm">
-                    <div class="overlay-bg -dark">
+                    <div class="overlay-dark">
                       <span class="icon glyphicon glyphicon-zoom-in"></span>
-                      <div class="text-box -overlay -sm">
+                      <div class="text -sm">
                         <h1 class="title">SWEET<span class="hilight">COLLECTIONS</span></h1>
                         <p class="meta">Save up to 30% off</p>
                       </div>
@@ -212,9 +214,9 @@
                 </div>
                 <div class="img-feature col-sm-6">
                   <div class="thumb -sm">
-                    <div class="overlay-bg -dark">
+                    <div class="overlay-dark">
                       <span class="icon glyphicon glyphicon-zoom-in"></span>
-                      <div class="text-box -overlay -sm">
+                      <div class="text -sm">
                         <h1 class="title">SWEET<span class="hilight">COLLECTIONS</span></h1>
                         <p class="meta">Save up to 30% off</p>
                       </div>
@@ -226,9 +228,9 @@
               <div class="row">
                 <div class="img-feature col-sm-12">
                   <div class="thumb -wide">
-                    <div class="overlay-bg -dark">
+                    <div class="overlay-dark">
                       <span class="icon glyphicon glyphicon-zoom-in"></span>
-                      <div class="text-box -overlay">
+                      <div class="text">
                         <h1 class="title">SWEET<span class="hilight">COLLECTIONS</span></h1>
                         <p class="meta">Save up to 30% off</p>
                       </div>
@@ -241,237 +243,242 @@
           </div>
         </div>
       </section> <!-- /#call-to-action -->
+
+      <section class="section-block" id="featured=product">
+        
+      </section> <!-- /#eatured-product -->
       
-      <div class="modal -fullscreen fade" id="userModal" role="dialog" aria-labelledby="gridSystemModalLabel">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <button class="close btn-block -md -minimal" type="button" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-            <div class="modal-body col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-lg-4 col-lg-offset-4">
-              <div class="main">
-                <!-- Nav tabs -->
-                <ul class="nav nav-tabs" id="userTabs" role="tablist">
-                  <li role="presentation" class="active"><a href="#sign-in" aria-controls="sign-in" role="tab" data-toggle="tab">SIGN IN</a></li>
-                  <li role="presentation"><a href="#sign-up" aria-controls="sign-up" role="tab" data-toggle="tab">SIGN UP</a></li>
-                </ul>
-      
-                <!-- Tab panes -->
-                <div class="tab-content">
-                  <div class="tab-pane active" id="sign-in" role="tabpanel">
-                    <form class="form-block" role="form">
-                      <h2 class="title">I'm already a member</h2>
-                      <p class="meta">Consetetur sadipscing elitr sed diam nonumy eirmod tempor sadipscing.</p>
-                      <div class="content">
-                        <div class="form-group">
-                          <label class="control-label sr-only" for="lemail">Your username or email</label>
-                          <input class="form-control" id="lemail" type="email" placeholder="Your username or email">
-                        </div>
-                        <div class="form-group">
-                          <label class="control-label sr-only" for="lpassword">Your Password</label>
-                          <input class="form-control" id="lpassword" type="password" placeholder="Your Password">
-                        </div>
-                        <div class="form-group _mg-top-sm">
-                          <button class="btn btn-default btn-block" type="submit">Login</button>
-                        </div>
-                        <div class="form-group text-center">
-                          <div class="checkbox">
-                            <label><input type="checkbox"> Remember me</label>
-                            <a href="#">Lost Your Password?</a>
-                          </div>
+    </div>
+
+    <div class="modal -fullscreen fade" id="userModal" role="dialog" aria-labelledby="gridSystemModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <button class="close btn-block -md -minimal" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <div class="modal-body col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-lg-4 col-lg-offset-4">
+            <div class="main">
+              <!-- Nav tabs -->
+              <ul class="nav nav-tabs" id="userTabs" role="tablist">
+                <li role="presentation" class="active"><a href="#sign-in" aria-controls="sign-in" role="tab" data-toggle="tab">SIGN IN</a></li>
+                <li role="presentation"><a href="#sign-up" aria-controls="sign-up" role="tab" data-toggle="tab">SIGN UP</a></li>
+              </ul>
+    
+              <!-- Tab panes -->
+              <div class="tab-content">
+                <div class="tab-pane active" id="sign-in" role="tabpanel">
+                  <form class="form-block" role="form">
+                    <h2 class="title">I'm already a member</h2>
+                    <p class="meta">Consetetur sadipscing elitr sed diam nonumy eirmod tempor sadipscing.</p>
+                    <div class="content">
+                      <div class="form-group">
+                        <label class="control-label sr-only" for="lemail">Your username or email</label>
+                        <input class="form-control" id="lemail" type="email" placeholder="Your username or email">
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label sr-only" for="lpassword">Your Password</label>
+                        <input class="form-control" id="lpassword" type="password" placeholder="Your Password">
+                      </div>
+                      <div class="form-group _mg-top-sm">
+                        <button class="btn btn-default btn-block" type="submit">Login</button>
+                      </div>
+                      <div class="form-group text-center">
+                        <div class="checkbox">
+                          <label><input type="checkbox"> Remember me</label>
+                          <a href="#">Lost Your Password?</a>
                         </div>
                       </div>
-                    </form>
-                  </div>
-                  <div class="tab-pane" id="sign-up" role="tabpanel">
-                    <form class="form-block" role="form">
-                      <h2 class="title">I'm new here</h2>
-                      <p class="meta">Consetetur sadipscing elitr sed diam nonumy eirmod tempor sadipscing.</p>
-                      <div class="content">
-                        <div class="form-group">
-                          <label class="control-label sr-only" for="yname">Your Name</label>
-                          <input class="form-control" type="text" name="yname" id="yname" placeholder="Your Name">
-                        </div>
-                        <div class="form-group">
-                          <label class="control-label sr-only" for="resemail">Your Email</label>
-                          <input class="form-control" id="resemail" type="email" placeholder="Your Email">
-                        </div>
-                        <div class="form-group">
-                          <label class="control-label sr-only" for="respassw">Your Password</label>
-                          <input class="form-control" id="respassw" type="password" placeholder="Your Password">
-                        </div>
-                        <div class="form-group _mg-top-sm">
-                          <button class="btn btn-default btn-block" type="submit">Register</button>
-                        </div>
+                    </div>
+                  </form>
+                </div>
+                <div class="tab-pane" id="sign-up" role="tabpanel">
+                  <form class="form-block" role="form">
+                    <h2 class="title">I'm new here</h2>
+                    <p class="meta">Consetetur sadipscing elitr sed diam nonumy eirmod tempor sadipscing.</p>
+                    <div class="content">
+                      <div class="form-group">
+                        <label class="control-label sr-only" for="yname">Your Name</label>
+                        <input class="form-control" type="text" name="yname" id="yname" placeholder="Your Name">
                       </div>
-                    </form>
-                  </div>
+                      <div class="form-group">
+                        <label class="control-label sr-only" for="resemail">Your Email</label>
+                        <input class="form-control" id="resemail" type="email" placeholder="Your Email">
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label sr-only" for="respassw">Your Password</label>
+                        <input class="form-control" id="respassw" type="password" placeholder="Your Password">
+                      </div>
+                      <div class="form-group _mg-top-sm">
+                        <button class="btn btn-default btn-block" type="submit">Register</button>
+                      </div>
+                    </div>
+                  </form>
                 </div>
               </div>
             </div>
-          </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-      </div><!-- /.modal-login/regis -->
-      
-      <div class="modal -fullscreen fade" id="menu-modal" role="dialog" aria-labelledby="gridSystemModalLabel">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <button class="close btn-block -md -minimal" type="button" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-            <div class="modal-body col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-lg-4 col-lg-offset-4">
-              <div class="main">
-                <nav class="mobile-menu">
-                  <ul class="menu nav">
-                    <li class="dropdown-lists -main">
-                      <a class="header" href="#">Home</a>
-                      <ul class="dropdown-lists -sub">
-                        <li><a href="index.html">Home default</a></li>
-                        <li><a href="index-2.html">Home Version 2</a></li>
-                        <li><a href="index-3.html">Home Version 3</a></li>
-                        <li><a href="index-4.html">Home Version 4</a></li>
-                        <li><a href="index-5.html">Home Furniture</a></li>
-                      </ul>
-                    </li>
-                    <li class="dropdown-lists -main">
-                      <a class="header" href="#">Men</a>
-                      <ul class="dropdown-lists -sub">
-                        <li><a href="#">New arrivals</a></li>
-                        <li><a href="#">Best Sellers</a></li>
-                        <li>
-                          <a class="header" href="#">Dresses</a>
-                          <ul class="dropdown-lists -subsub">
-                            <li><a href="#">All Dresses</a></li>
-                            <li><a href="#">Maxi Dresses</a></li>
-                            <li><a href="#">Midi Dresses</a></li>
-                            <li><a href="#">Short Dresses</a></li>
-                            <li><a href="#">Little Black Dresses</a></li>
-                            <li><a href="#">Bodycon Dresses</a></li>
-                            <li><a href="#">Backless Dresses</a></li>
-                            <li><a href="#">Lace Dresses</a></li>
-                          </ul>
-                        </li>
-                        <li>
-                          <a class="header" href="#">Bags</a>
-                          <ul class="dropdown-lists -subsub">
-                            <li><a href="#">Hand Bags</a></li>
-                            <li><a href="#">Messenger Bags</a></li>
-                            <li><a href="#">Large Handbags</a></li>
-                          </ul>
-                        </li>
-                        <li>
-                          <a class="header" href="#">Tops</a>
-                          <ul class="dropdown-lists -subsub">
-                            <li><a href="#">Casual Tops</a></li>
-                            <li><a href="#">Dressy Tops</a></li>
-                            <li><a href="#">Sexy Tops</a></li>
-                            <li><a href="#">Sleeveless</a></li>
-                            <li><a href="#">Short Sleeve</a></li>
-                            <li><a href="#">Long Sleeve</a></li>
-                            <li><a href="#">Blouses and Shirts</a></li>
-                            <li><a href="#">Tank Tops</a></li>
-                          </ul>
-                        </li>
-                        <li>
-                          <a class="header" href="#">Accessories</a>
-                          <ul class="dropdown-lists -subsub">
-                            <li><a href="#">Handbags &amp; Purses</a></li>
-                            <li><a href="#">Clutches</a></li>
-                            <li><a href="#">Totes &amp; Backpacks</a></li>
-                            <li><a href="#">Sunglasses</a></li>
-                            <li><a href="#">Hats</a></li>
-                            <li><a href="#">Belts</a></li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </li>
-                    <li class="dropdown-lists -main">
-                      <a class="header" href="#">Women</a>
-                      <ul class="dropdown-lists -sub" style="display: none;">
-                        <li><a href="#">New arrivals</a></li>
-                        <li><a href="#">Best Sellers</a></li>
-                        <li>
-                          <a href="#">Dresses</a>
-                          <ul class="dropdown-lists -subsub">
-                            <li><a href="#">All Dresses</a></li>
-                            <li><a href="#">Maxi Dresses</a></li>
-                            <li><a href="#">Midi Dresses</a></li>
-                            <li><a href="#">Short Dresses</a></li>
-                            <li><a href="#">Little Black Dresses</a></li>
-                            <li><a href="#">Bodycon Dresses</a></li>
-                            <li><a href="#">Backless Dresses</a></li>
-                            <li><a href="#">Lace Dresses</a></li>
-                          </ul>
-                        </li>
-                        <li>
-                          <a href="#">Bags</a>
-                          <ul class="dropdown-lists -subsub">
-                            <li><a href="#">Hand Bags</a></li>
-                            <li><a href="#">Messenger Bags</a></li>
-                            <li><a href="#">Large Handbags</a></li>
-                          </ul>
-                        </li>
-                        <li><a href="#">Tops</a>
-                          <ul class="dropdown-lists -subsub">
-                            <li><a href="#">Casual Tops</a></li>
-                            <li><a href="#">Dressy Tops</a></li>
-                            <li><a href="#">Sexy Tops</a></li>
-                            <li><a href="#">Sleeveless</a></li>
-                            <li><a href="#">Short Sleeve</a></li>
-                            <li><a href="#">Long Sleeve</a></li>
-                            <li><a href="#">Blouses and Shirts</a></li>
-                            <li><a href="#">Tank Tops</a></li>
-                          </ul>
-                        </li>
-                        <li><a href="#">Accessories</a>
-                          <ul class="dropdown-lists -subsub">
-                            <li><a href="#">Handbags &amp; Purses</a></li>
-                            <li><a href="#">Clutches</a></li>
-                            <li><a href="#">Totes &amp; Backpacks</a></li>
-                            <li><a href="#">Sunglasses</a></li>
-                            <li><a href="#">Hats</a></li>
-                            <li><a href="#">Belts</a></li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </li>
-                    <li class="dropdown-lists -main">
-                      <a class="header" href="#">Shop</a>
-                      <ul class="dropdown-lists -sub">
-                        <li><a href="shop-products-grid.html">Products Grid</a></li>
-                        <li><a href="shop-products-grid-row.html">Products Grid Row</a></li>
-                        <li><a href="shop-products-grid-canvas-filter.html">Products Grid Canvas Filter</a></li>
-                        <li><a href="shop-products-grid-sidebar.html">Products Grid Sidebar</a></li>
-                        <li><a href="shop-products-list-sidebar.html">Product List Sidebar</a></li>
-                        <li><a href="shop-products-detail.html">Product Detail</a></li>
-                        <li><a href="shop-shopping-cart.html">Shopping Cart</a></li>
-                        <li><a href="shop-checkout.html">Checkout</a></li>
-                      </ul>
-                    </li>
-                    <li class="dropdown-lists -main">
-                      <a class="header" href="#">Blog</a>
-                      <ul class="dropdown-lists -sub">
-                        <li><a href="blog-list-fullwidth.html">Blog List Fullwidth</a></li>
-                        <li><a href="blog-standard.html">Blog Standard</a></li>
-                        <li><a href="blog-single.html">Blog Single</a></li>
-                      </ul>
-                    </li>
-                    <li class="dropdown-lists -main">
-                      <a href="#" class="header">Contact</a>
-                      <ul class="dropdown-lists -sub">
-                        <li><a href="contact-1.html">Contact V1</a></li>
-                        <li><a href="contact-2.html">Contact V2</a></li>
-                        <li><a href="contact-3.html">Contact V3</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                </nav> <!-- /.mobile-menu -->
-              </div>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal-login/regis -->
+    
+    <div class="modal -fullscreen fade" id="menu-modal" role="dialog" aria-labelledby="gridSystemModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <button class="close btn-block -md -minimal" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <div class="modal-body col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-lg-4 col-lg-offset-4">
+            <div class="main">
+              <nav class="mobile-menu">
+                <ul class="menu nav">
+                  <li class="dropdown-lists -main">
+                    <a class="header" href="#">Home</a>
+                    <ul class="dropdown-lists -sub">
+                      <li><a href="index.html">Home default</a></li>
+                      <li><a href="index-2.html">Home Version 2</a></li>
+                      <li><a href="index-3.html">Home Version 3</a></li>
+                      <li><a href="index-4.html">Home Version 4</a></li>
+                      <li><a href="index-5.html">Home Furniture</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown-lists -main">
+                    <a class="header" href="#">Men</a>
+                    <ul class="dropdown-lists -sub">
+                      <li><a href="#">New arrivals</a></li>
+                      <li><a href="#">Best Sellers</a></li>
+                      <li>
+                        <a class="header" href="#">Dresses</a>
+                        <ul class="dropdown-lists -subsub">
+                          <li><a href="#">All Dresses</a></li>
+                          <li><a href="#">Maxi Dresses</a></li>
+                          <li><a href="#">Midi Dresses</a></li>
+                          <li><a href="#">Short Dresses</a></li>
+                          <li><a href="#">Little Black Dresses</a></li>
+                          <li><a href="#">Bodycon Dresses</a></li>
+                          <li><a href="#">Backless Dresses</a></li>
+                          <li><a href="#">Lace Dresses</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a class="header" href="#">Bags</a>
+                        <ul class="dropdown-lists -subsub">
+                          <li><a href="#">Hand Bags</a></li>
+                          <li><a href="#">Messenger Bags</a></li>
+                          <li><a href="#">Large Handbags</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a class="header" href="#">Tops</a>
+                        <ul class="dropdown-lists -subsub">
+                          <li><a href="#">Casual Tops</a></li>
+                          <li><a href="#">Dressy Tops</a></li>
+                          <li><a href="#">Sexy Tops</a></li>
+                          <li><a href="#">Sleeveless</a></li>
+                          <li><a href="#">Short Sleeve</a></li>
+                          <li><a href="#">Long Sleeve</a></li>
+                          <li><a href="#">Blouses and Shirts</a></li>
+                          <li><a href="#">Tank Tops</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a class="header" href="#">Accessories</a>
+                        <ul class="dropdown-lists -subsub">
+                          <li><a href="#">Handbags &amp; Purses</a></li>
+                          <li><a href="#">Clutches</a></li>
+                          <li><a href="#">Totes &amp; Backpacks</a></li>
+                          <li><a href="#">Sunglasses</a></li>
+                          <li><a href="#">Hats</a></li>
+                          <li><a href="#">Belts</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="dropdown-lists -main">
+                    <a class="header" href="#">Women</a>
+                    <ul class="dropdown-lists -sub" style="display: none;">
+                      <li><a href="#">New arrivals</a></li>
+                      <li><a href="#">Best Sellers</a></li>
+                      <li>
+                        <a href="#">Dresses</a>
+                        <ul class="dropdown-lists -subsub">
+                          <li><a href="#">All Dresses</a></li>
+                          <li><a href="#">Maxi Dresses</a></li>
+                          <li><a href="#">Midi Dresses</a></li>
+                          <li><a href="#">Short Dresses</a></li>
+                          <li><a href="#">Little Black Dresses</a></li>
+                          <li><a href="#">Bodycon Dresses</a></li>
+                          <li><a href="#">Backless Dresses</a></li>
+                          <li><a href="#">Lace Dresses</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="#">Bags</a>
+                        <ul class="dropdown-lists -subsub">
+                          <li><a href="#">Hand Bags</a></li>
+                          <li><a href="#">Messenger Bags</a></li>
+                          <li><a href="#">Large Handbags</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="#">Tops</a>
+                        <ul class="dropdown-lists -subsub">
+                          <li><a href="#">Casual Tops</a></li>
+                          <li><a href="#">Dressy Tops</a></li>
+                          <li><a href="#">Sexy Tops</a></li>
+                          <li><a href="#">Sleeveless</a></li>
+                          <li><a href="#">Short Sleeve</a></li>
+                          <li><a href="#">Long Sleeve</a></li>
+                          <li><a href="#">Blouses and Shirts</a></li>
+                          <li><a href="#">Tank Tops</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="#">Accessories</a>
+                        <ul class="dropdown-lists -subsub">
+                          <li><a href="#">Handbags &amp; Purses</a></li>
+                          <li><a href="#">Clutches</a></li>
+                          <li><a href="#">Totes &amp; Backpacks</a></li>
+                          <li><a href="#">Sunglasses</a></li>
+                          <li><a href="#">Hats</a></li>
+                          <li><a href="#">Belts</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="dropdown-lists -main">
+                    <a class="header" href="#">Shop</a>
+                    <ul class="dropdown-lists -sub">
+                      <li><a href="shop-products-grid.html">Products Grid</a></li>
+                      <li><a href="shop-products-grid-row.html">Products Grid Row</a></li>
+                      <li><a href="shop-products-grid-canvas-filter.html">Products Grid Canvas Filter</a></li>
+                      <li><a href="shop-products-grid-sidebar.html">Products Grid Sidebar</a></li>
+                      <li><a href="shop-products-list-sidebar.html">Product List Sidebar</a></li>
+                      <li><a href="shop-products-detail.html">Product Detail</a></li>
+                      <li><a href="shop-shopping-cart.html">Shopping Cart</a></li>
+                      <li><a href="shop-checkout.html">Checkout</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown-lists -main">
+                    <a class="header" href="#">Blog</a>
+                    <ul class="dropdown-lists -sub">
+                      <li><a href="blog-list-fullwidth.html">Blog List Fullwidth</a></li>
+                      <li><a href="blog-standard.html">Blog Standard</a></li>
+                      <li><a href="blog-single.html">Blog Single</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown-lists -main">
+                    <a href="#" class="header">Contact</a>
+                    <ul class="dropdown-lists -sub">
+                      <li><a href="contact-1.html">Contact V1</a></li>
+                      <li><a href="contact-2.html">Contact V2</a></li>
+                      <li><a href="contact-3.html">Contact V3</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </nav> <!-- /.mobile-menu -->
             </div>
-          </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-      </div><!-- /.menu-modal -->
-    </div>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.menu-modal -->
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="/bower_components/jquery/dist/jquery.js"></script>

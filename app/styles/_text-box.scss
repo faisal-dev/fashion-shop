@@ -22,11 +22,15 @@
     margin-bottom: 0;
   }
 
-  // Small text
+  //--------------------------
+  // Small textbox
+
+  // Title
   &.-sm > .title {
     font-size: 1.8em;
   }
 
+  // Hilight
   &.-sm > .title > .hilight {
     font-size: 1em;
     @include mappy-query(tv) {
@@ -39,15 +43,10 @@
 
 
 // =================================
-// Textbox detail
+// Textbox detail placeholder
 //==================================
-.text-box.-overlay {
+%text-box.-imgcaption {
   position: absolute;
   bottom: 0;
   z-index: 999;
-
-  > .title,
-  > .meta {
-    color: $white;
-  }
 }
