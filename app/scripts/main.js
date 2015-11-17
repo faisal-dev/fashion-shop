@@ -37,7 +37,7 @@ console.log('\'Allo \'Allo!'); // eslint-disable-line no-console
     // Smooth scroll on mouse
 
 
-    // Landing page
+    //Landing page
     // $('#landing-page').on('click', '.icon-button', function(event) {
     //   event.preventDefault();
     //   /* Act on the event */
@@ -200,13 +200,15 @@ console.log('\'Allo \'Allo!'); // eslint-disable-line no-console
     // Product wol slider
     //=========================================================
     $('#owl-product-1').owlCarousel({
-      items : 3,
-      pagination : false
+      items : 4,
+      pagination : false,
+      navigation: true
     });
 
     $('#owl-product-2').owlCarousel({
       items : 4,
-      pagination : false
+      pagination : false,
+      navigation: true
     });
   });
 

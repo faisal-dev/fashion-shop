@@ -113,7 +113,6 @@
     background-size: cover;
     background-repeat: no-repeat;
     height: 400px;
-    top: 0;
 
     @include mappy-query(tablet) {
       height: 600px;
