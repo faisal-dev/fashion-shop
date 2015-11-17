@@ -18,6 +18,42 @@
 
 
 
+// =================================
+// ACTION OVELAY
+//==================================
+.overlay-action {
+  @extend %overlay-block;
+  background-color: transparent;
+  text-align: center;
+
+  > .action {
+    @include clearfix();
+    @extend %list-item;
+    display: inline-block;
+    font-size: 2em;
+    z-index: 999;
+    opacity: 0;
+    transition: all .5s ease;
+  }
+
+  > .action > li > a {
+    background-color: rgba($pink, .8);
+
+    &:hover {
+      background-color: rgba($pink, 1);
+    }
+  }
+
+  &:before {
+    @extend %block-content;
+    @include size(100%, 100%);
+    background-color: rgba($white, .1);
+    transition: all .5s ease;
+    transform: translate(-80%, -80%) rotate(45deg);
+  }
+}
+
+
 
 // =================================
 // DARK OVELAY
@@ -34,7 +70,7 @@
 
   // Text
   > .text {
-    @extend .text-box;
+    @extend %text-box;
     @extend %text-box.-imgcaption;
   }
 

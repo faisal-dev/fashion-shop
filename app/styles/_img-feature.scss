@@ -38,10 +38,48 @@
     }
   }
 
-  // =================================
-  // Feature contents
-  //==================================
-  > .content {
 
+  // Thumb portrait
+  //----------------------------------
+  > .thumb.-portrait {
+    padding-bottom: 50rem;
+
+    @include mappy-query(tablet) {
+      padding-bottom: 48rem;
+    }
+
+    @include mappy-query(tv) {
+      padding-bottom: 35rem;
+    }
+  }
+}
+
+
+.img-feature.-product {
+  // Thumb content
+  //----------------------------------
+  > .content {
+    @extend %text-box;
+    @extend %text-box.-product;
+  }
+
+  > .thumb > .overlay-action > .action {
+    margin-top: 20rem;
+
+    @include mappy-query(tv) {
+      margin-top: 15rem;
+    }
+  }
+
+  &:hover > .thumb > .overlay-action {
+    background-color: rgba($midnight, .4);
+  }
+
+  &:hover > .thumb > .overlay-action:before {
+    transform: translate(-40%, -50%) rotate(45deg);
+  }
+
+  &:hover > .thumb > .overlay-action > .action {
+    opacity: 1;
   }
 }

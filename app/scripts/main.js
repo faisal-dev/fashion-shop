@@ -200,11 +200,13 @@ console.log('\'Allo \'Allo!'); // eslint-disable-line no-console
     // Product wol slider
     //=========================================================
     $('#owl-product-1').owlCarousel({
-      items : 4
+      items : 4,
+      pagination : false
     });
 
     $('#owl-product-2').owlCarousel({
-      items : 4
+      items : 4,
+      pagination : false
     });
   });
 

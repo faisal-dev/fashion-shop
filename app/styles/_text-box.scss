@@ -1,7 +1,7 @@
 // =================================
 // Textbox defaults
 //==================================
-.text-box {
+%text-box {
   padding: 1rem;
   position: relative;
 
@@ -20,6 +20,45 @@
     margin-bottom: 0;
   }
 
+}
+
+
+
+// =================================
+// Textbox detail placeholder
+//==================================
+%text-box.-product {
+  text-align: center;
+  > .rating {
+    display: block;
+    font-size: 2em;
+    color: $sun;
+  }
+
+  > .price {
+    display: inline-block;
+    font-size: 2em;
+    position: relative;
+
+    &:before {
+      @include size(1em, auto);
+      display: inline-block;
+      content: '$';
+      position: absolute;
+      left: -30px;
+    }
+  }
+}
+
+
+// =================================
+// Textbox detail placeholder
+//==================================
+%text-box.-imgcaption {
+  position: absolute;
+  bottom: 0;
+  z-index: 999;
+
   //--------------------------
   // Small textbox
 
@@ -35,18 +74,6 @@
       font-size: 1.2em;
     }
   }
-}
-
-
-
-
-// =================================
-// Textbox detail placeholder
-//==================================
-%text-box.-imgcaption {
-  position: absolute;
-  bottom: 0;
-  z-index: 999;
 }
 
 

@@ -1,0 +1,19 @@
+%list-item {
+  padding-left: 0;
+  list-style: none;
+
+  li {
+    display: block;
+    float: left;
+    margin-right: .5rem;
+  }
+
+  > li > a > .glyphicon {
+    padding: 1rem;
+  }
+
+  &.-invert > li > a {
+    display: block;
+    color: $white;
+  }
+}
