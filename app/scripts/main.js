@@ -9,28 +9,28 @@ console.log('\'Allo \'Allo!'); // eslint-disable-line no-console
     $wrapper = $('.wrapper');
 
 
-  // $window.load(function() {
-  //   // Simulate fake loader page
-  //   var
-  //     pageloader = $('#pageloader'),
-  //     svgElem = $('dc-spinner');
+  $window.load(function() {
+    // Simulate fake loader page
+    var
+      pageloader = $('#pageloader'),
+      svgElem = $('dc-spinner');
 
-  //   setTimeout(function() {
-  //     svgElem.attr('class', 'svgloader _fade-out');  // SVG don't have addClass().
+    setTimeout(function() {
+      svgElem.attr('class', 'svgloader _fade-out');  // SVG don't have addClass().
 
-  //     setTimeout(function() {
-  //       pageloader
-  //         .addClass('_fade-out')
-  //         .bind('transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd', function() {
-  //           // hiding block when css animation finished.
-  //           $(this).addClass('hidden');
-  //           // Set overflow-y auto;
-  //           // body.addClass('_loaded');
-  //         });
-  //     }, 500);
+      setTimeout(function() {
+        pageloader
+          .addClass('_fade-out')
+          .bind('transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd', function() {
+            // hiding block when css animation finished.
+            $(this).addClass('hidden');
+            // Set overflow-y auto;
+            // body.addClass('_loaded');
+          });
+      }, 500);
 
-  //   }, 5000);
-  // });
+    }, 5000);
+  });
 
   $document.ready(function() {
 
@@ -38,16 +38,16 @@ console.log('\'Allo \'Allo!'); // eslint-disable-line no-console
 
 
     //Landing page
-    // $('#landing-page').on('click', '.icon-button', function(event) {
-    //   event.preventDefault();
-    //   /* Act on the event */
-    //   $wrapper
-    //     .addClass('_slideup')
-    //     .bind('transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd', function(event) {
-    //       /* Act on the event */
-    //       $body.addClass('_loaded');
-    //     });;
-    // });
+    $('#landing-page').on('click', '.icon-button', function(event) {
+      event.preventDefault();
+      /* Act on the event */
+      $wrapper
+        .addClass('_slideup')
+        .bind('transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd', function(event) {
+          /* Act on the event */
+          $body.addClass('_loaded');
+        });;
+    });
 
 
     // Search toggle
