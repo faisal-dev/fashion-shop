@@ -20,6 +20,10 @@
 
 .list-foot-links {
   @extend %list-item;
+  > li {
+    width: 100%;
+  }
+
   > li > a {
     color: rgba($white, .6);
   }
