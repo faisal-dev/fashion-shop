@@ -1,0 +1,44 @@
+.news-blog {
+  margin-top: 5rem;
+  position: relative;
+
+  .owl-controls {
+    position: absolute;
+    width: 100%;
+    top: 8rem;
+    opacity: 0;
+    transition: all .5s ease;
+
+    .owl-prev,
+    .owl-next {
+      background-color: $pink !important;
+      border-radius: 0 !important;
+      opacity: 1 !important;
+      padding: 1rem 2rem !important;
+      position: absolute;
+    }
+
+    .owl-prev {
+      left: 0;
+    }
+
+    .owl-next {
+      right: 0;
+    }
+  }
+
+  .blog > .title {
+    margin-top: 2rem;
+  }
+
+  .blog > .read-more {
+    color: $black;
+    text-decoration: underline;
+  }
+
+  &:hover {
+    .owl-controls {
+      opacity: 1;
+    }
+  }
+}

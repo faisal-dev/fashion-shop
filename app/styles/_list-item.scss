@@ -17,3 +17,13 @@
     color: $white;
   }
 }
+
+.icon-lists {
+  @include clearfix();
+  @extend %list-item;
+  display: block;
+
+  > li > a {
+    color: rgba(gray, .6);
+  }
+}

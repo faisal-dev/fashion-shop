@@ -210,6 +210,12 @@ console.log('\'Allo \'Allo!'); // eslint-disable-line no-console
       pagination : false,
       navigation: true
     });
+
+    $('#owl-blog').owlCarousel({
+      items : 3,
+      pagination : false,
+      navigation: true
+    });
   });
 
   // Promotions countdown

@@ -3,6 +3,23 @@
   position: relative;
   margin-bottom: 1rem;
 
+  > .date-box {
+    background-color: rgba($black, .8);
+    color: $white;
+    display: inline-block;
+    padding: 1rem 2rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    > .day {
+      color: $warm-sun;
+      display: block;
+      font-size: 2em;
+      font-weight: 800;
+    }
+  }
+
   // =================================
   // Thumb images
   //==================================
