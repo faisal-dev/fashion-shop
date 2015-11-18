@@ -216,6 +216,13 @@ console.log('\'Allo \'Allo!'); // eslint-disable-line no-console
       pagination : false,
       navigation: true
     });
+
+    $('#owl-client').owlCarousel({
+      items : 6,
+      pagination : false,
+      itemsMobile : [479, 2],
+      itemsTablet : [786, 3]
+    });
   });
 
   // Promotions countdown

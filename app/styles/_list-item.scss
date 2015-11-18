@@ -18,12 +18,41 @@
   }
 }
 
+.list-foot-links {
+  @extend %list-item;
+  > li > a {
+    color: rgba($white, .6);
+  }
+}
+
 .icon-lists {
   @include clearfix();
   @extend %list-item;
-  display: block;
+  display: inline-block;
+
+  > li {
+    display: block;
+  }
 
   > li > a {
     color: rgba(gray, .6);
+  }
+
+  .icon {
+    @include  size(60px, 60px);
+    display: block;
+    background-size: cover;
+  }
+
+  .icon-fb {
+    background-image: url(../images/facebook.png);
+  }
+
+  .icon-tt {
+    background-image: url(../images/twitter.png);
+  }
+
+  .icon-ig {
+    background-image: url(../images/instagram.png);
   }
 }

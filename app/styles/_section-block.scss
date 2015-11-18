@@ -7,4 +7,14 @@
   &.-paper {
     background-color: $light-gray;
   }
+
+  &.-sm {
+  	padding-top: 3rem;
+  	padding-bottom: 3rem;
+  }
+
+  &.-dark {
+  	background-color: $midnight;
+  	color: $white;
+  }
 }
